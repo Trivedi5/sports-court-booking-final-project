@@ -167,7 +167,7 @@ registerMessage: string = '';
       return;
     }
 
-    fetch('https://sports-court-booking-final-project.onrender.com/bookings', {
+fetch('https://sports-court-booking-final-project.onrender.com/api/bookings', {  
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + token
