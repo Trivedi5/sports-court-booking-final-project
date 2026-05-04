@@ -1,0 +1,166 @@
+.page {
+  min-height: 100vh;
+  background-color: #f4f6f8;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #102a43;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.courts-section h2 {
+  color: #102a43;
+}
+
+.court-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.court-card h3 {
+  margin-top: 0;
+  color: #102a43;
+}
+
+.court-card button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.court-card button:hover {
+  background-color: #0d47a1;
+}
+.bookings-section {
+  margin-top: 30px;
+}
+
+.secondary-btn {
+  background-color: #00a676;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.secondary-btn:hover {
+  background-color: #007f5f;
+}
+
+.booking-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #00a676;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+.delete-btn {
+  background-color: #d62828;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #9d0208;
+}
+.login-section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.login-card {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.login-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-card button,
+.logout-btn {
+  background-color: #102a43;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logged-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logout-btn {
+  background-color: #d62828;
+}
+.booking-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.booking-form {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.booking-form input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.selected-message {
+  color: #1976d2;
+  font-weight: bold;
+}

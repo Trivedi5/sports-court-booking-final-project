@@ -1,0 +1,119 @@
+<div class="page">
+  <header class="header">
+    <h1>Sports Court Booking</h1>
+    <p>Find and book sports courts in your city.</p>
+  </header>
+  <section class="login-section">
+  <h2>User Register</h2>
+
+  @if (!isLoggedIn()) {
+    <div class="login-card">
+      <input
+        type="text"
+        placeholder="Name"
+        [(ngModel)]="registerName"
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="registerEmail"
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="registerPassword"
+      />
+
+      <button (click)="register()">Register</button>
+    </div>
+  }
+
+  @if (registerMessage) {
+    <p>{{ registerMessage }}</p>
+  }
+</section>
+
+  <section class="login-section">
+    <h2>User Login</h2>
+
+    @if (!isLoggedIn()) {
+      <div class="login-card">
+        <input
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="email"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+        />
+
+        <button (click)="login()">Login</button>
+      </div>
+    }
+
+    @if (isLoggedIn()) {
+      <div class="logged-card">
+        <p>You are logged in.</p>
+        <button class="logout-btn" (click)="logout()">Logout</button>
+      </div>
+    }
+
+    @if (loginMessage) {
+      <p>{{ loginMessage }}</p>
+    }
+  </section>
+
+  <section class="courts-section">
+    <h2>Available Courts</h2>
+
+    @for (court of courts; track court._id) {
+      <div class="court-card">
+        <h3>{{ court.name }}</h3>
+        <p><strong>Location:</strong> {{ court.location }}</p>
+        <p><strong>Sport:</strong> {{ court.sportType }}</p>
+        <p><strong>Price:</strong> ${{ court.pricePerHour }} / hour</p>
+
+      <button (click)="openBooking(court._id)">Book Court</button>
+      </div>
+    }
+  </section>
+<section class="booking-form">
+  <h2>Book Court</h2>
+
+  @if (selectedCourtId) {
+    <p class="selected-message">Court selected. Choose date and time.</p>
+  }
+
+  <label>Booking Date</label>
+  <input type="date" [(ngModel)]="bookingDate" />
+
+  <label>Booking Time</label>
+  <input type="time" [(ngModel)]="bookingTime" />
+
+  <button (click)="bookCourt(selectedCourtId)">Confirm Booking</button>
+</section>
+
+  <section class="bookings-section">
+    <h2>My Bookings</h2>
+
+    <button class="secondary-btn" (click)="loadBookings()">Load My Bookings</button>
+
+    @for (booking of bookings; track booking._id) {
+      <div class="booking-card">
+        <h3>{{ booking.court.name }}</h3>
+        <p><strong>Date:</strong> {{ booking.bookingDate }}</p>
+        <p><strong>Time:</strong> {{ booking.bookingTime }}</p>
+        <p><strong>Status:</strong> {{ booking.status }}</p>
+
+        <button class="delete-btn" (click)="deleteBooking(booking._id)">
+          Delete Booking
+        </button>
+      </div>
+    }
+  </section>
+</div>
