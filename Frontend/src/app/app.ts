@@ -136,7 +136,7 @@ registerMessage: string = '';
   bookingTime: this.bookingTime
 };
 
-    fetch('https://sports-court-booking-final-project.onrender.com/api/bookings', {
+   fetch('https://sports-court-booking-final-project.onrender.com/api/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -190,7 +190,7 @@ registerMessage: string = '';
       return;
     }
 
-    fetch('https://sports-court-booking-final-project.onrender.com/bookings/' + bookingId, {
+   fetch('https://sports-court-booking-final-project.onrender.com/api/bookings/' + bookingId, {
       method: 'DELETE',
       headers: {
         'Authorization': 'Bearer ' + token
