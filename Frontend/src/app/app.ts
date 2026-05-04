@@ -48,7 +48,7 @@ registerMessage: string = '';
     password: this.registerPassword
   };
 
-  fetch('https://sports-court-booking-final-project.onrender.com/auth/register', {
+ fetch('https://sports-court-booking-final-project.onrender.com/api/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ registerMessage: string = '';
       password: this.password
     };
 
-    fetch('https://sports-court-booking-final-project.onrender.com/auth/login', {
+   fetch('https://sports-court-booking-final-project.onrender.com/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ registerMessage: string = '';
   bookingTime: this.bookingTime
 };
 
-    fetch('https://sports-court-booking-final-project.onrender.com/bookings', {
+    fetch('https://sports-court-booking-final-project.onrender.com/api/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
